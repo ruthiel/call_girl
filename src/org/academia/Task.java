@@ -24,4 +24,8 @@ public class Task implements Comparable<Task>{
     public String toString() {
         return name;
     }
+
+    public String getName() {
+        return name;
+    }
 }

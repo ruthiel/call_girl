@@ -13,6 +13,15 @@ public class Main {
         callGirl.addContact("Sérgio", "912367458");
         callGirl.addContact("Bruno", "915678374");
 
+        callGirl.createTask("Sofia", Priority.HIGH);
+        callGirl.createTask("Sérgio", Priority.HIGH);
+        callGirl.createTask("Ana", Priority.MEDIUM);
+        callGirl.createTask("Jean", Priority.HIGH);
+        callGirl.createTask("João", Priority.HIGH);
+
+        while (callGirl.hasTasks()) {
+            callGirl.call();
+        }
 
 
 

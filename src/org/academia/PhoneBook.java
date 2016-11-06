@@ -22,4 +22,12 @@ public class PhoneBook {
     public String toString() {
         return phoneList.toString();
     }
+
+    public boolean hasName(String name) {
+        return phoneList.containsKey(name);
+    }
+
+    public String getNumber(String name) {
+        return phoneList.get(name);
+    }
 }
