@@ -13,6 +13,7 @@ public class CallGirl {
 
     public CallGirl() {
         taskList = new PriorityQueue<>();
+        phoneBook = new PhoneBook();
     }
 
     public void createTask(String name, Priority priority) {
@@ -23,11 +24,11 @@ public class CallGirl {
 
     }
 
-    public void addContact() {
+    public void addContact(String name, String number) {
+        phoneBook.add(name, number);
+
 
     }
 
-    public Task testRemove() {
-        return taskList.poll();
-    }
+
 }

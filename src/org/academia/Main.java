@@ -8,20 +8,12 @@ public class Main {
 
         CallGirl callGirl = new CallGirl();
 
-        callGirl.createTask("Sérgio", Priority.HIGH);
-        callGirl.createTask("Sofia", Priority.LOW);
-        callGirl.createTask("Jean", Priority.HIGH);
-        callGirl.createTask("Antoninho", Priority.MEDIUM);
-        callGirl.createTask("Naruto", Priority.HIGH);
-        callGirl.createTask("Benedita", Priority.LOW);
+        callGirl.addContact("Sofia", "919993767");
+        callGirl.addContact("Jean", "894039876");
+        callGirl.addContact("Sérgio", "912367458");
+        callGirl.addContact("Bruno", "915678374");
 
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
-        System.out.println(callGirl.testRemove());
+
 
 
     }
