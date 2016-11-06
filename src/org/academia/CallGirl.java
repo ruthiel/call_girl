@@ -1,5 +1,7 @@
 package org.academia;
 
+import java.io.IOException;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -10,10 +12,8 @@ public class CallGirl {
 
     private PhoneBook phoneBook;
     private Queue<Task> taskList;
-    private boolean hasTasks;
 
-    public CallGirl() {
-        hasTasks = true;
+    public CallGirl() throws IOException {
         taskList = new PriorityQueue<>();
         phoneBook = new PhoneBook();
     }
@@ -26,7 +26,7 @@ public class CallGirl {
         Task nextTask = taskList.poll();
 
         if ( nextTask == null) { //se for nulo o name não tem um NullPointerEcxeption
-            hasTasks = false;
+            System.out.println("I don't have more tasks to do.");
             return;
         }
 
@@ -40,7 +40,7 @@ public class CallGirl {
     }
 
 
-    public void addContact(String name, String number) {
+    public void addContact(String name, String number) throws IOException {
         phoneBook.add(name, number);
 
 
@@ -48,7 +48,11 @@ public class CallGirl {
 
 
     public boolean hasTasks() {
-
-        return hasTasks;
+        return !taskList.isEmpty();
     }
+
+    public Map<String, String> getPhoneBook() {
+        return phoneBook.getMap();
+    }
+
 }
